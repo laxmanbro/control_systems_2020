@@ -15,20 +15,15 @@ G\brak{j\omega}&=\frac{75\brak{1+0.2j\omega}}{j\omega\brak{\brak{j\omega}^2 + 16
 \end{align}
 poles = 0 , -8-6j , -8+6j\\
 zeros = -5\\
-Gain and phase plots are shown in \ref{fig:ee18btech11049_gain}:a and \ref{fig:ee18btech11049_phase}:b 
+Gain and phase plots are shown in Fig  \ref{fig:ee18btech11049} 
 \begin{figure}[!h]
 \centering
-  \includegraphics[width=\columnwidth]{./figs/ee18btech11049_1.eps}
+  \includegraphics[width=\columnwidth]{./figs/ee18btech11049.eps}
   \caption{a}
-  \label{fig:ee18btech11049_gain}
+  \label{fig:ee18btech11049}
 \end{figure}
-\begin{figure}[!h]
-\centering
-  \includegraphics[width=\columnwidth]{./figs/ee18btech11049_2.eps}
-  \caption{b}
-  \label{fig:ee18btech11049_phase}
-\end{figure}
-The following code plots Fig  \ref{fig:ee18btech11049_gain}:a and \ref{fig:ee18btech11049_phase}:b 
+
+The following code plots Fig \ref{fig:ee18btech11049} 
 
 \begin{lstlisting}
 codes/ee18btech11049.py
@@ -41,7 +36,7 @@ codes/ee18btech11049.py
     \frac{75\sqrt{\omega^2 + 25}}{\omega\sqrt{\brak{\omega+6}^2+64}\sqrt{\brak{\omega-6}^2+64}} &= 1
 \label{eq:ee18btech11049_gain}
 \end{align}{}
-Solving \eqref{eq:ee18btech11049_gain} \brak{or}\\ from Fig \ref{fig:ee18btech11049_gain}:a frequency at which gain = 1 ,is gain crossover frequency $\omega_{gc}$ .
+Solving \eqref{eq:ee18btech11049_gain} \brak{or}\\ from Fig \ref{fig:ee18btech11049} frequency at which gain = 1 ,is gain crossover frequency $\omega_{gc}$ .
 
 \begin{align}
 \implies
@@ -54,7 +49,7 @@ PM &= 91.7
 
 \item Find $-G(\j\omega)  $ db , where $\omega$ is frequency when phase = $-180\degree$ . This is known as  {\em gain margin} (GM)
 \\
-\solution From Fig \ref{fig:ee18btech11049_phase}:b ,we can say that phase  never crosses $-180\degree$ .
+\solution From Fig \ref{fig:ee18btech11049} ,we can say that phase  never crosses $-180\degree$ .
 So , the gain margin is {\em infinite}.
 Which means we can add any gain , and the equivalent closed loop system never goes unstable.
 
