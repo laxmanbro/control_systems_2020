@@ -5,6 +5,11 @@ from pylab import*
 import control
 from control import tf
 
+#if using termux
+import subprocess
+import shlex
+#end if
+
 #Defining the transfer function 
 s1 = signal.lti([0.2*75,75], [1, 16 ,100,0]) #Transfer Function = 75(1+0.2s)/s(s^2+16s+100)
 
@@ -36,3 +41,10 @@ print(pm)
 print(gm)
 print(Wgc)
 print(Wpc)
+
+#if using termux
+plt.savefig('./figs/ee18btech11049.pdf')
+plt.savefig('./figs/ee18btech11049.eps')
+subprocess.run(shlex.split("termux-open ./figs/ee18btech11049.pdf"))
+#else
+# plt.show()
